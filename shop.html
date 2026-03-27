@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Home Button -->
+<a href="index.html" id="homeButton">🏠 Home</a>
+<nav class="pill-nav">
+  <a href="shop.html?category=all">All</a>
+  <a href="shop.html?category=shoes">Shoes</a>
+  <a href="shop.html?category=shirts">Shirts</a>
+  <a href="shop.html?category=pants">Pants</a>
+</nav>
+ <!-- Filters Toggle Button at the top -->
+<button id="toggleFiltersTop" class="toggle-btn">Show Filters ▾</button>
+
+<!-- Sidebar Filters (collapsed by default) -->
+<div id="filtersSidebarTop" class="filters-sidebar">
+  <label for="categoryFilter">Category:</label>
+  <select id="categoryFilter">
+    <option value="all">All</option>
+    <option value="shoes">Shoes</option>
+    <option value="shirts">Shirts</option>
+    <option value="pants">Pants</option>
+  </select>
+
+  <label for="sizeFilter">Size:</label>
+  <select id="sizeFilter">
+    <option value="all">All</option>
+    <option value="S">S</option>
+    <option value="M">M</option>
+    <option value="L">L</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+  </select>
+
+  <label for="priceSort">Price:</label>
+  <select id="priceSort">
+    <option value="default">Default</option>
+    <option value="low">Low → High</option>
+    <option value="high">High → Low</option>
+  </select>
+</div>
+<div id="shopContainer" style="display:flex; gap:40px; margin-top:120px; flex-wrap:wrap; justify-content:center;">
+
+
+
+<!-- Products container -->
+<div id="shopContainer" style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:20px;">
+  <div id="products" style="flex:1; min-width:250px; display:flex; flex-wrap:wrap; gap:20px;"></div>
+</div>
+
+</div>
+
+<!-- Cart Icon -->
+<div id="cartIcon">🛒 <span id="cartCount">0</span></div>
+
+<!-- Cart -->
+<div id="cart">
+  <div id="cartHeader">
+    <h2>Your Cart</h2>
+    <button id="closeCart">X</button>
+  </div>
+  <div id="cartItems"></div>
+  <h3>Total: $<span id="cartTotal">0</span></h3>
+  <button id="checkoutBtn">Checkout</button>
+</div>
+
+<!-- Product Modal -->
+<div id="productModal" class="modal">
+  <div class="modal-content">
+    <button id="closeModalBtn" class="modal-close">X</button>
+    <img id="modalImage">
+    <h2 id="modalName"></h2>
+    <p id="modalPrice"></p>
+    <p id="modalSize"></p>
+    <p id="modalStock"></p>
+    <button id="addToCart">Add To Cart</button>
+  </div>
+</div>
+
+<script type="module" src="shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Admin Upload</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1 style="text-align:center;margin-top:100px;">Upload Product</h1>
+
+<div class="admin-form">
+
+<input id="name" placeholder="Item Name">
+
+<input id="price" placeholder="Price">
+
+<input id="size" placeholder="Size">
+
+<input id="stock" placeholder="Stock Quantity">
+
+<select id="category">
+
+<option value="shirts">Shirts</option>
+<option value="pants">Pants</option>
+<option value="shoes">Shoes</option>
+
+</select>
+
+<input type="file" id="image">
+
+<button id="uploadBtn">Upload Product</button>
+
+</div>
+
+<h2 style="text-align:center;margin-top:60px;">Uploaded Products</h2>
+
+<div id="productList"></div>
+
+<script type="module" src="admin.js"></script>
+
+</body>
+
+</html>
